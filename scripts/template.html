@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>REHA SHINE 團康影片中文資料庫｜日照中心活動點子</title>
+<meta name="description" content="整理日本日照中心 REHA SHINE（リハシャインみやこんじょ）YouTube 上 277 支團康影片，提供繁體中文活動名稱、玩法、訓練重點與帶領提醒，方便台灣日照中心與據點夥伴找活動。">
+<meta property="og:title" content="REHA SHINE 團康影片中文資料庫">
+<meta property="og:description" content="277 支日本日照團康影片，中文玩法整理、可依訓練重點與道具篩選。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#0f766e; --teal-600:#0d9488; --teal-50:#ecfdf8; --teal-100:#ccfbef;
+  --sun:#f59e0b; --sun-50:#fff8e6; --coral:#e8604c; --coral-50:#fff1ee;
+  --ink:#1c2a33; --ink-2:#44545e; --muted:#6b7a84; --line:#e3e9ec;
+  --bg:#f7faf9; --card:#ffffff; --radius:16px;
+  --shadow:0 1px 2px rgba(16,40,48,.06),0 6px 20px rgba(16,40,48,.06);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans TC",-apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei",sans-serif;font-size:16px;line-height:1.7}
+a{color:var(--teal)}
+img{max-width:100%;display:block}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- top nav ---------- */
+.topnav{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+.topnav .wrap{display:flex;align-items:center;gap:16px;height:58px}
+.logo{font-weight:900;font-size:1.05rem;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.logo-mark{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--teal),#14b8a6);color:#fff;display:grid;place-items:center;font-size:.85rem}
+.topnav nav{margin-left:auto;display:flex;gap:4px}
+.topnav nav a{text-decoration:none;color:var(--ink-2);font-weight:500;padding:8px 12px;border-radius:10px;font-size:.95rem}
+.topnav nav a:hover{background:var(--teal-50);color:var(--teal)}
+
+/* ---------- hero ---------- */
+.hero{background:radial-gradient(1000px 400px at 85% -10%,#d9f6ee 0%,transparent 60%),radial-gradient(700px 300px at -10% 110%,#fff1d6 0%,transparent 60%),#fff;border-bottom:1px solid var(--line)}
+.hero .wrap{padding-top:44px;padding-bottom:40px;display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:center}
+.eyebrow{display:inline-block;background:var(--teal-50);color:var(--teal);font-weight:700;font-size:.85rem;padding:4px 12px;border-radius:999px}
+.hero h1{font-size:clamp(1.75rem,3.6vw,2.6rem);line-height:1.25;margin:14px 0 12px;font-weight:900;letter-spacing:.5px}
+.hero h1 em{font-style:normal;color:var(--teal)}
+.hero p.lead{font-size:1.08rem;color:var(--ink-2);margin:0 0 22px}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;border-radius:12px;padding:11px 18px;font-weight:700;cursor:pointer;text-decoration:none;font-size:.98rem;transition:.15s}
+.btn-primary{background:var(--teal);color:#fff}
+.btn-primary:hover{background:#0b5f59}
+.btn-ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+.btn-sm{padding:7px 12px;font-size:.9rem;border-radius:10px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:2rem;font-weight:900;line-height:1.1;color:var(--teal)}
+.stat span{color:var(--ink-2);font-size:.93rem}
+.stat:nth-child(2) b{color:var(--sun)}
+.stat:nth-child(3) b{color:var(--coral)}
+.stat:nth-child(4) b{color:#2563eb}
+
+/* ---------- sections ---------- */
+section.block{padding:56px 0}
+.sec-head{max-width:760px;margin-bottom:26px}
+.sec-head h2{font-size:clamp(1.45rem,2.6vw,1.9rem);margin:6px 0 8px;font-weight:900;line-height:1.3}
+.sec-head p{color:var(--ink-2);margin:0}
+.kicker{color:var(--coral);font-weight:700;font-size:.9rem;letter-spacing:1px}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:22px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.panel h3{margin:0 0 10px;font-size:1.15rem}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;margin:0}
+.facts dt{color:var(--muted);font-size:.92rem;white-space:nowrap}
+.facts dd{margin:0;font-weight:500}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.quote{background:var(--sun-50);border-radius:var(--radius);padding:20px;border:1px solid #fbe3b0}
+.quote:nth-child(2){background:var(--teal-50);border-color:var(--teal-100)}
+.quote:nth-child(3){background:var(--coral-50);border-color:#fbd5cd}
+.quote .jp{font-size:.9rem;color:var(--muted);margin-bottom:6px}
+.quote .zh{font-size:1.12rem;font-weight:900;line-height:1.45;margin-bottom:8px}
+.quote p{margin:0;color:var(--ink-2);font-size:.95rem}
+.why{margin-top:22px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.why .panel{padding:20px}
+.why ol,.why ul{margin:0;padding-left:1.2em}
+.why li{margin:4px 0}
+.timeline{list-style:none;margin:0;padding:0;position:relative}
+.timeline li{position:relative;padding:0 0 14px 22px}
+.timeline li::before{content:"";position:absolute;left:4px;top:9px;width:9px;height:9px;border-radius:50%;background:var(--teal)}
+.timeline li::after{content:"";position:absolute;left:8px;top:20px;bottom:0;width:1px;background:var(--line)}
+.timeline li:last-child::after{display:none}
+.timeline b{color:var(--teal);margin-right:6px}
+.sources{margin-top:18px;font-size:.88rem;color:var(--muted)}
+.sources a{color:var(--muted)}
+.note{font-size:.88rem;color:var(--muted);margin-top:10px}
+
+/* how to use */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.step .num{width:34px;height:34px;border-radius:50%;background:var(--teal);color:#fff;font-weight:900;display:grid;place-items:center;margin-bottom:8px}
+.step h3{margin:0 0 4px;font-size:1.05rem}
+.step p{margin:0;color:var(--ink-2);font-size:.95rem}
+
+/* ---------- database ---------- */
+#db{padding-top:40px;background:#fff;border-top:1px solid var(--line)}
+.toolbar{position:sticky;top:58px;z-index:30;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);padding:12px 0;border-bottom:1px solid var(--line);margin-bottom:16px}
+.toolbar-row{display:flex;gap:10px;align-items:center}
+.search{position:relative;flex:1;min-width:0}
+.search input{width:100%;height:48px;border:1.5px solid var(--line);border-radius:14px;padding:0 44px 0 44px;font-size:1rem;background:#fff;outline:none}
+.search input:focus{border-color:var(--teal);box-shadow:0 0 0 4px var(--teal-50)}
+.search .ico{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.search .clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);border:0;background:#eef2f3;border-radius:50%;width:30px;height:30px;cursor:pointer;display:none}
+.search.has .clear{display:block}
+.select{height:48px;border:1.5px solid var(--line);border-radius:14px;padding:0 12px;background:#fff;cursor:pointer}
+.icon-btn{height:48px;border:1.5px solid var(--line);border-radius:14px;background:#fff;padding:0 14px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.icon-btn:hover{border-color:var(--teal);color:var(--teal)}
+.icon-btn.on{background:var(--coral-50);border-color:var(--coral);color:var(--coral)}
+.filter-toggle{display:none}
+.filter-toggle .badge{background:var(--teal);color:#fff;border-radius:999px;font-size:.78rem;padding:0 7px;min-width:20px;line-height:20px}
+.cats{display:flex;gap:8px;overflow-x:auto;padding:10px 0 2px;scrollbar-width:none}
+.cats::-webkit-scrollbar{display:none}
+.cat{flex:0 0 auto;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px;font-weight:700;cursor:pointer;font-size:.93rem;white-space:nowrap}
+.cat small{color:var(--muted);font-weight:500;margin-left:4px}
+.cat.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.cat.on small{color:#cfd8dc}
+
+.db-layout{display:grid;grid-template-columns:270px 1fr;gap:26px;align-items:start}
+.filters{position:sticky;top:200px;max-height:calc(100vh - 220px);overflow:auto;padding-right:6px}
+.filters-inner{display:flex;flex-direction:column;gap:18px}
+.fgroup h4{margin:0 0 8px;font-size:.95rem;display:flex;align-items:center;justify-content:space-between}
+.fgroup h4 button{border:0;background:none;color:var(--muted);font-size:.82rem;cursor:pointer;padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:5px 10px;font-size:.9rem;cursor:pointer;line-height:1.4;display:inline-flex;align-items:center;gap:5px}
+.chip small{color:var(--muted);font-size:.78rem}
+.chip:hover{border-color:var(--teal)}
+.chip.on{background:var(--teal);border-color:var(--teal);color:#fff}
+.chip.on small{color:#d6f5ee}
+.chip[disabled]{opacity:.4;cursor:default}
+.presets .chip{background:var(--sun-50);border-color:#f6dfa6}
+.presets .chip.on{background:var(--sun);border-color:var(--sun);color:#fff}
+.sheet-head,.sheet-foot,.scrim{display:none}
+.fhint{font-size:.82rem;color:var(--muted);margin:0}
+
+.resultbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:14px;min-height:34px}
+.resultbar .count{font-weight:700;margin-right:6px}
+.active-chip{background:var(--teal-50);color:var(--teal);border:1px solid var(--teal-100);border-radius:999px;padding:3px 6px 3px 12px;font-size:.88rem;display:inline-flex;align-items:center;gap:4px}
+.active-chip button{border:0;background:none;cursor:pointer;color:inherit;font-size:1rem;line-height:1;padding:0 4px}
+.link-btn{border:0;background:none;color:var(--coral);font-weight:700;cursor:pointer;font-size:.9rem}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;cursor:pointer;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s;text-align:left;padding:0}
+.card:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(16,40,48,.12)}
+.card:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.thumb{position:relative;aspect-ratio:4/3;background:#e9eef0;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb .len{position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.72);color:#fff;font-size:.78rem;padding:1px 7px;border-radius:6px}
+.thumb .cat-tag{position:absolute;left:8px;top:8px;background:rgba(255,255,255,.94);font-size:.75rem;font-weight:700;padding:2px 8px;border-radius:6px;color:var(--ink)}
+.fav{position:absolute;right:8px;top:8px;width:36px;height:36px;border-radius:50%;border:0;background:rgba(255,255,255,.94);cursor:pointer;font-size:1.1rem;display:grid;place-items:center;color:#9aa7ae}
+.fav.on{color:var(--coral)}
+.card-body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card-title{font-weight:900;font-size:1.05rem;line-height:1.4}
+.card-jp{font-size:.8rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card-desc{font-size:.9rem;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto;padding-top:4px}
+.tag{font-size:.76rem;padding:1px 8px;border-radius:6px;background:#eef3f4;color:var(--ink-2)}
+.tag.g{background:var(--teal-50);color:var(--teal)}
+.tag.p{background:var(--sun-50);color:#a16207}
+.tag.d{background:var(--coral-50);color:#b7432f}
+.more{display:flex;justify-content:center;margin:26px 0 10px}
+.empty{text-align:center;padding:50px 20px;color:var(--muted);background:#fbfcfc;border:1px dashed var(--line);border-radius:var(--radius)}
+
+/* ---------- modal ---------- */
+dialog{position:fixed;border:0;padding:0;border-radius:20px;max-width:1080px;width:calc(100% - 32px);max-height:calc(100dvh - 32px);box-shadow:0 30px 80px rgba(0,0,0,.35);overflow:hidden}
+dialog::backdrop{background:rgba(15,25,30,.62)}
+.m-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);max-height:calc(100dvh - 32px)}
+.m-video{background:#0d1418;display:flex;align-items:center;justify-content:center;padding:16px;min-height:300px}
+.m-video .frame{width:100%;max-width:400px;aspect-ratio:9/16;max-height:calc(100dvh - 80px);border-radius:12px;overflow:hidden;background:#000}
+.m-video .frame.wide{max-width:none;aspect-ratio:16/9}
+.m-video iframe{width:100%;height:100%;border:0}
+.m-info{overflow:auto;padding:22px 24px 24px}
+.m-top{display:flex;align-items:flex-start;gap:10px}
+.m-top h2{margin:0;font-size:1.4rem;line-height:1.35;flex:1}
+.m-close{border:0;background:#eef2f3;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1.2rem;flex:0 0 auto}
+#mClose{position:absolute;top:12px;right:12px;z-index:5;background:rgba(255,255,255,.95);box-shadow:0 2px 10px rgba(0,0,0,.2)}
+.m-top h2{padding-right:44px}
+.m-jp{color:var(--muted);font-size:.9rem;margin:4px 0 10px}
+.m-sec{margin-top:16px}
+.m-sec h3{margin:0 0 6px;font-size:.98rem;color:var(--teal)}
+.m-sec p,.m-sec ul{margin:0;color:var(--ink-2)}
+.m-sec ul{padding-left:1.2em}
+.m-meta{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.86rem;color:var(--muted);margin-top:16px}
+.m-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.m-nav{display:flex;justify-content:space-between;gap:8px;margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+textarea.notes{width:100%;min-height:72px;border:1.5px solid var(--line);border-radius:12px;padding:10px;resize:vertical}
+.disclaim{font-size:.82rem;color:var(--muted);background:#f5f8f8;border-radius:10px;padding:8px 10px;margin-top:10px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:10px 18px;border-radius:12px;opacity:0;transition:.25s;z-index:100;pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%)}
+
+footer{background:#13232a;color:#c5d2d6;padding:36px 0 44px;font-size:.92rem}
+footer a{color:#9fe6d6}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr;gap:24px}
+
+/* ---------- responsive ---------- */
+@media (max-width:1000px){
+  .hero .wrap{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .quotes{grid-template-columns:1fr}
+  .db-layout{grid-template-columns:1fr}
+  .filter-toggle{display:inline-flex}
+  .filters{position:fixed;inset:auto 0 0 0;top:auto;max-height:86dvh;background:#fff;z-index:60;border-radius:20px 20px 0 0;box-shadow:0 -10px 40px rgba(0,0,0,.25);padding:0;transform:translateY(105%);transition:transform .25s ease;display:flex;flex-direction:column}
+  .filters.open{transform:none}
+  .filters-inner{overflow:auto;padding:4px 18px 16px}
+  .sheet-head{display:flex;align-items:center;justify-content:space-between;padding:14px 18px 8px;border-bottom:1px solid var(--line)}
+  .sheet-head b{font-size:1.1rem}
+  .sheet-foot{display:flex;gap:10px;padding:12px 18px calc(12px + env(safe-area-inset-bottom));border-top:1px solid var(--line)}
+  .sheet-foot .btn{flex:1}
+  .scrim{display:block;position:fixed;inset:0;background:rgba(15,25,30,.5);z-index:55;opacity:0;pointer-events:none;transition:.2s}
+  .scrim.show{opacity:1;pointer-events:auto}
+  .m-wrap{display:block;overflow:auto}
+  .m-video{padding:0;min-height:0}
+  .m-video .frame{max-width:none;width:100%;aspect-ratio:auto;height:min(62dvh,560px);border-radius:0}
+  .m-video .frame.wide{height:auto;aspect-ratio:16/9}
+  .m-info{overflow:visible}
+}
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  .topnav nav a.hide-sm{display:none}
+  .topnav nav a{padding:8px 8px;font-size:.9rem}
+  .hero .wrap{padding-top:28px;padding-bottom:28px;gap:22px}
+  .stat b{font-size:1.6rem}
+  section.block{padding:40px 0}
+  .why{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .toolbar .select{display:none}
+  .toolbar-row{gap:8px;flex-wrap:wrap}
+  .search{flex:1 1 100%}
+  .toolbar-row .icon-btn{flex:1;height:42px;justify-content:center}
+  .toolbar{padding:10px 0}
+  .icon-btn{padding:0 12px}
+  .search input{height:44px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .card-body{padding:10px 10px 12px}
+  .card-title{font-size:.98rem}
+  .card-jp{display:none}
+  .card-desc{font-size:.85rem}
+  .tags .tag:nth-child(n+3){display:none}
+  dialog{width:100%;max-width:none;max-height:100dvh;height:100dvh;border-radius:0;margin:0}
+  .m-wrap{max-height:100dvh;height:100dvh}
+  .m-info{padding:16px 16px 28px}
+  .m-top h2{font-size:1.2rem}
+  footer .cols{grid-template-columns:1fr}
+  .mobile-sort{display:block !important}
+}
+@media (max-width:360px){.grid{grid-template-columns:1fr}}
+.mobile-sort{display:none}
+</style>
+</head>
+<body>
+
+<header class="topnav">
+  <div class="wrap">
+    <a class="logo" href="#top"><span class="logo-mark">RS</span>團康影片資料庫</a>
+    <nav>
+      <a href="#about">影片來源</a>
+      <a href="#howto" class="hide-sm">使用方式</a>
+      <a href="#db">找活動</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">給台灣日照中心、C據點的夥伴</span>
+      <h1>日本日照中心 <em>REHA SHINE</em><br>團康影片中文資料庫</h1>
+      <p class="lead">把一家日本日照中心公開在 YouTube 的 <b id="h-total">277</b> 支團康影片，逐支看過、用中文整理玩法、訓練重點和帶領提醒。依道具、場地、參與方式快速篩選，找到明天就能帶的活動。</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#db">開始找活動 ↓</a>
+        <a class="btn btn-ghost" href="#about">認識影片背後的團隊</a>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b id="s-games">255</b><span>支團康遊戲影片</span></div>
+      <div class="stat"><b id="s-towel">14</b><span>支一條毛巾就能玩</span></div>
+      <div class="stat"><b id="s-diy">6</b><span>支教具製作與介紹</span></div>
+      <div class="stat"><b>300+</b><span>REHA SHINE 每年設計的活動數</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">ABOUT · 影片從哪裡來</div>
+      <h2>一家日本小鎮日照中心，為什麼願意公開這麼多活動？</h2>
+      <p>這些影片來自 YouTube 頻道「REHA SHINE」（@REHASHINE）。背後是日本宮崎縣都城市的一間日照中心，由職能治療師所長帶領團隊，把每天和長輩一起玩的團康，一支支拍下來分享給全世界。</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="panel">
+        <h3>經營單位</h3>
+        <dl class="facts">
+          <dt>頻道名稱</dt><dd>REHA SHINE（YouTube @REHASHINE）</dd>
+          <dt>日照中心</dt><dd>リハシャインみやこんじょ（Rehashine 都城）<br>日本宮崎縣都城市的日間照顧（通所介護）中心，2015 年 5 月開設</dd>
+          <dt>經營公司</dt><dd>リハケアウイング株式会社（總公司在鹿兒島縣曽於市，2012 年成立），旗下還有日照、訪視護理、兒童發展支持等服務</dd>
+          <dt>帶領團隊</dt><dd>所長<b>野田晃司</b>是<b>職能治療師</b>，先在復健醫院擔任職能治療師，2012 年加入公司、2015 年起負責リハシャイン的經營；常務董事野田修司也是職能治療師。活動由現場的物理治療師、職能治療師與照顧夥伴一起設計。公司代表人野田秀明則是物理治療師。</dd>
+          <dt>社群影響力</dt><dd>Instagram 約 59 萬追蹤，全社群追蹤數超過 80 萬；單支影片在 Instagram 曾突破 5,700 萬次觀看</dd>
+          <dt>出版</dt><dd>2026 年 5 月由 KADOKAWA 出版第一本書《アイデア日本一！みんなのレクリエーション大全100》，上市後多次再刷</dd>
+        </dl>
+      </div>
+      <div class="panel">
+        <h3>分享的歷程</h3>
+        <ol class="timeline">
+          <li><b>2012</b>リハケアウイング株式会社成立</li>
+          <li><b>2015</b>リハシャインみやこんじょ開設，野田晃司擔任管理職</li>
+          <li><b>約 2020 起</b>開始在社群固定每週發布一支團康影片，最早在 Instagram 分享</li>
+          <li><b>2023.12</b>YouTube 開始大量上傳 Shorts 短片（本資料庫的 part-1 起）</li>
+          <li><b>2023–2026</b>陸續登上日本電視節目，包括 TBS、NHK、日本電視台等</li>
+          <li><b>2025.08</b>介紹自家開發的教具「駒太郎」</li>
+          <li><b>2026.02</b>發布教具製作教學影片</li>
+          <li><b>2026.05</b>出版《みんなのレクリエーション大全100》</li>
+          <li><b>2026.07</b>發布遊戲毛巾「レクル」系列教學影片</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="quotes">
+      <div class="quote">
+        <div class="jp">「また来たくなるデイサービス」</div>
+        <div class="zh">讓長輩「還想再來」的日照中心</div>
+        <p>這是他們的目標。活動不是為了填滿時間，而是讓長輩期待下一次來。</p>
+      </div>
+      <div class="quote">
+        <div class="jp">「心が動けば身体が動く」</div>
+        <div class="zh">心動了，身體就會跟著動</div>
+        <p>先讓長輩覺得好玩、想參與，自然就會伸手、彎腰、踏步——復健藏在遊戲裡。</p>
+      </div>
+      <div class="quote">
+        <div class="jp">「夢と笑顔が輝く場所」</div>
+        <div class="zh">讓夢想和笑容閃閃發光的地方</div>
+        <p>寫在 YouTube 頻道介紹裡的一句話，說明他們希望日照中心成為什麼樣的地方。</p>
+      </div>
+    </div>
+
+    <div class="why">
+      <div class="panel">
+        <h3>為什麼要分享這麼多？</h3>
+        <ul>
+          <li><b>幫助為活動點子煩惱的人。</b>他們一開始在 Instagram 發布，就是希望「能幫上為團康點子傷腦筋的人」。</li>
+          <li><b>改變大家對照顧現場的印象。</b>團隊希望讓更多人看到，照顧現場也可以充滿笑聲與活力。</li>
+          <li><b>讓看影片的人也變得有精神。</b>他們表示會持續發布「讓觀看的人也能變得有元氣」的內容。</li>
+          <li><b>讓帶活動不再只靠天分。</b>所長在介紹新書的文章中提到，寫書是為了終結「明天的團康要做什麼……」的煩惱，重點是「在現場用得上」。</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>他們帶活動的做法</h3>
+        <ul>
+          <li><b>每年 300 種以上，玩過的盡量不重複</b>，讓長輩每次都有新鮮感。</li>
+          <li><b>備課只用開場前 30 分鐘。</b>工作人員累垮就無法長久，「能持續」比一次做得很華麗更重要。</li>
+          <li><b>道具來自生活。</b>椅子、桌子、浴室籃、紙箱、浮力棒、紙杯，就能組出新遊戲。</li>
+          <li><b>找出穩定好玩的「招牌活動」再變化。</b>工作人員輪流帶，靠好用的活動架構，而不是靠個人臨場搞笑的天分。</li>
+          <li><b>在現場實際玩過才算數。</b>點子可以很多，但要在真正的長輩面前試過，才知道好不好帶。</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="sources">資料來源：
+      <a href="https://www.youtube.com/@REHASHINE" target="_blank" rel="noopener">REHA SHINE YouTube 頻道</a>、
+      <a href="https://wing-smile.com/about" target="_blank" rel="noopener">リハケアウイング 公司概要</a>、
+      <a href="https://wing-smile.com/shine" target="_blank" rel="noopener">リハシャインみやこんじょ 官方消息</a>、
+      <a href="https://rkb.jp/contents/202604/201377/" target="_blank" rel="noopener">RKB 每日放送專題（2026.04）</a>、
+      <a href="https://group.kadokawa.co.jp/information/promotional_topics/article-14805.html" target="_blank" rel="noopener">KADOKAWA 新書新聞稿</a>、
+      <a href="https://note.com/writer_noda/n/nc1393c363816" target="_blank" rel="noopener">野田晃司 note 文章</a>、
+      <a href="https://www.wantedly.com/id/kouji_noda_ab" target="_blank" rel="noopener">野田晃司 Wantedly 個人經歷</a>。
+      追蹤數等數字會隨時間變動，以 2026 年各來源公布為準；引文為日文原文的中文意譯。
+    </p>
+  </div>
+</section>
+
+<section class="block" id="howto" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">HOW TO · 使用方式</div>
+      <h2>三個步驟找到合適的活動</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>搜尋或點選情境</h3><p>輸入「毛巾」「氣球」「腳」「顏色」等關鍵字，或點「練腳力」「免做教具」等快速情境。</p></div>
+      <div class="step"><div class="num">2</div><h3>依需求篩選</h3><p>同一類別內可複選（符合任一即可），不同類別之間會同時成立。標籤後的數字是目前可找到的筆數。</p></div>
+      <div class="step"><div class="num">3</div><h3>看影片、收藏、記筆記</h3><p>點卡片直接播放影片並查看中文玩法；按愛心收藏，筆記只存在你自己的瀏覽器裡。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="db">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">DATABASE · 活動資料庫</div>
+      <h2>找活動</h2>
+      <p>中文玩法是依影片畫面逐支整理的摘要，Shorts 多半沒有旁白，細節請以影片為準。訓練重點與帶領提醒是給台灣帶領者的參考，請依長輩狀況調整。</p>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <div class="wrap">
+      <div class="toolbar-row">
+        <label class="search" id="searchBox">
+          <span class="sr">搜尋活動</span>
+          <svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="q" type="search" placeholder="搜尋：毛巾、氣球、腳、顏色、接力、タオル…" autocomplete="off" enterkeyhint="search">
+          <button type="button" class="clear" id="qClear" aria-label="清除搜尋">✕</button>
+        </label>
+        <select class="select" id="sort" aria-label="排序">
+          <option value="new">最新上傳</option>
+          <option value="old">最早上傳</option>
+          <option value="views">觀看次數多</option>
+          <option value="short">影片較短</option>
+        </select>
+        <button type="button" class="icon-btn" id="favBtn" aria-pressed="false" title="只看收藏">♥ <span class="lbl">收藏</span> <span id="favCount">0</span></button>
+        <button type="button" class="icon-btn" id="randBtn" title="隨機推薦一個活動">🎲 <span class="lbl">隨機</span></button>
+        <button type="button" class="icon-btn filter-toggle" id="filterBtn">篩選 <span class="badge" id="fCount" hidden>0</span></button>
+      </div>
+      <div class="cats" id="cats" role="tablist" aria-label="影片分類"></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="scrim" id="scrim"></div>
+    <div class="db-layout">
+      <aside class="filters" id="filters" aria-label="篩選條件">
+        <div class="sheet-head"><b>篩選條件</b><button type="button" class="m-close" id="sheetClose" aria-label="關閉">✕</button></div>
+        <div class="filters-inner" id="filtersInner">
+          <div class="fgroup mobile-sort">
+            <h4>排序</h4>
+            <select class="select" id="sortM" style="width:100%;height:44px">
+              <option value="new">最新上傳</option>
+              <option value="old">最早上傳</option>
+              <option value="views">觀看次數多</option>
+              <option value="short">影片較短</option>
+            </select>
+          </div>
+          <div class="fgroup presets">
+            <h4>快速情境</h4>
+            <div class="chips" id="presets"></div>
+          </div>
+        </div>
+        <div class="sheet-foot">
+          <button type="button" class="btn btn-ghost" id="sheetReset">清除</button>
+          <button type="button" class="btn btn-primary" id="sheetApply">顯示 <span id="sheetN">0</span> 筆</button>
+        </div>
+      </aside>
+
+      <div>
+        <div class="resultbar" id="resultbar"></div>
+        <div class="grid" id="grid"></div>
+        <div class="empty" id="empty" hidden>
+          <p style="font-size:1.1rem;margin:0 0 8px">找不到符合的活動</p>
+          <p style="margin:0 0 14px">試試減少篩選條件，或換個關鍵字。</p>
+          <button type="button" class="btn btn-primary btn-sm" id="emptyReset">清除全部條件</button>
+        </div>
+        <div class="more"><button type="button" class="btn btn-ghost" id="moreBtn" hidden>顯示更多</button></div>
+      </div>
+    </div>
+  </div>
+  <div style="height:40px"></div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div>
+      <p style="margin:0 0 8px;color:#fff;font-weight:700">REHA SHINE 團康影片中文資料庫（非官方整理）</p>
+      <p style="margin:0 0 8px">影片版權屬於 REHA SHINE／リハシャインみやこんじょ。本站只收錄影片連結與嵌入播放，中文名稱與玩法說明為台灣帶領者的學習整理，並非官方翻譯。若想支持原創團隊，歡迎到他們的頻道訂閱、按讚。</p>
+      <p style="margin:0">影片資料擷取日期：__DATA_DATE__。觀看次數與追蹤數會持續變動。</p>
+    </div>
+    <div>
+      <p style="margin:0 0 6px;color:#fff;font-weight:700">下載與回報</p>
+      <p style="margin:0 0 6px"><a href="rehashine_database.csv" download>下載完整資料（CSV，可用 Excel 開啟）</a></p>
+      <p style="margin:0">發現玩法描述有誤？歡迎來信 <a href="mailto:a0986391797@gmail.com?subject=REHA%20SHINE%20資料庫回報">a0986391797@gmail.com</a>，請附上活動編號（例如 RS-021）。</p>
+    </div>
+  </div>
+</footer>
+
+<dialog id="modal" aria-labelledby="mTitle">
+  <button type="button" class="m-close" id="mClose" aria-label="關閉">✕</button>
+  <div class="m-wrap">
+    <div class="m-video"><div class="frame" id="mFrame"></div></div>
+    <div class="m-info">
+      <div class="m-top"><h2 id="mTitle" tabindex="-1"></h2></div>
+      <div class="m-jp" id="mJp"></div>
+      <div class="tags" id="mTags"></div>
+      <div class="m-sec"><h3>玩法</h3><p id="mHow"></p></div>
+      <div class="m-sec" id="mPropsSec"><h3>準備</h3><p id="mProps"></p></div>
+      <div class="m-sec" id="mTipsSec"><h3>帶領提醒（台灣帶領者參考）</h3><ul id="mTips"></ul></div>
+      <div class="m-meta" id="mMeta"></div>
+      <div class="m-actions">
+        <a class="btn btn-primary btn-sm" id="mYt" target="_blank" rel="noopener">在 YouTube 開啟 ↗</a>
+        <button type="button" class="btn btn-ghost btn-sm" id="mFav">♡ 收藏</button>
+        <button type="button" class="btn btn-ghost btn-sm" id="mShare">複製活動連結</button>
+      </div>
+      <div class="m-sec"><h3>我的筆記</h3><textarea class="notes" id="mNote" placeholder="記下長輩反應、道具調整、預計帶領日期…（只存在這台裝置的瀏覽器）"></textarea></div>
+      <div class="disclaim">中文玩法依影片畫面整理，非官方說明；如有出入請以影片為準。</div>
+      <div class="m-nav">
+        <button type="button" class="btn btn-ghost btn-sm" id="mPrev">← 上一個</button>
+        <span id="mPos" style="align-self:center;color:var(--muted);font-size:.88rem"></span>
+        <button type="button" class="btn btn-ghost btn-sm" id="mNext">下一個 →</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<div class="toast" id="toast"></div>
+
+<script>
+const DATA = __DATA__;
+
+/* ---------- storage (safe) ---------- */
+const store = {
+  get(k, d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch(e){ return d; } },
+  set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+};
+const favs = new Set(store.get("rs_favs_v2", []));
+const notes = store.get("rs_notes_v2", {});
+
+/* ---------- filter config ---------- */
+const GROUPS = [
+  {key:"training_goals", label:"訓練重點", order:["上肢與肩臂","手眼協調","下肢肌力","手指精細動作","認知與反應","平衡與姿勢控制","社交與團隊合作"]},
+  {key:"participation", label:"參與方式", order:["個人挑戰","雙人搭檔","團隊合作","接力傳遞","競賽對戰"]},
+  {key:"posture", label:"姿勢", order:["坐姿可進行","站姿"]},
+  {key:"place", label:"活動場地", order:["桌面","地面","牆面／立架"]},
+  {key:"props", label:"主要道具", order:["一般球類","乒乓球","氣球","毛巾／大布","杯子","紙箱／紙板","浮力棒","籃子／桶子","呼拉圈","長桿／球棒","繩子","沙包","扇子","羽毛球","曬衣夾／衣架"]},
+  {key:"prep_level", label:"準備程度", order:["免準備（一條毛巾）","簡單準備","需自製教具"], single:true}
+];
+const CATS = ["全部","團康遊戲","毛巾遊戲（レクル系列）","教具製作與介紹","精選合輯","媒體報導"];
+const CAT_LABEL = {"毛巾遊戲（レクル系列）":"毛巾遊戲","教具製作與介紹":"教具製作","精選合輯":"合輯","媒體報導":"媒體報導"};
+const PRESETS = [
+  {label:"練腳力", f:{training_goals:["下肢肌力"]}},
+  {label:"認知與反應", f:{training_goals:["認知與反應"]}},
+  {label:"手指精細", f:{training_goals:["手指精細動作"]}},
+  {label:"大家一起玩", f:{participation:["團隊合作","接力傳遞"]}},
+  {label:"兩人一組", f:{participation:["雙人搭檔"]}},
+  {label:"免做教具", f:{prep_level:["免準備（一條毛巾）","簡單準備"]}},
+  {label:"桌上就能玩", f:{place:["桌面"]}},
+  {label:"氣球活動", f:{props:["氣球"]}}
+];
+const SYN = [["腳","足","下肢","踢","踩"],["手指","精細","夾"],["認知","失智","記憶","顏色","反應"],["毛巾","タオル","レクル"],["氣球","風船"],["乒乓","ピンポン"],["接力","リレー"],["保齡球","ボーリング"],["杯","コップ"],["輪椅","坐姿"],["教具","作法","製作"]];
+
+const state = { q:"", cat:"全部", f:{}, sort:"new", favOnly:false, shown:0 };
+GROUPS.forEach(g => state.f[g.key] = new Set());
+const PAGE = 24;
+let results = [];
+
+/* ---------- helpers ---------- */
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const norm = s => String(s || "").normalize("NFKC").toLowerCase();
+DATA.forEach(d => {
+  d._hay = norm([d.id, d.zh_title, d.jp_title, d.raw_title, d.how_to_play, d.category, d.episode_no ? "part"+d.episode_no+" 第"+d.episode_no+"回" : "",
+    ...d.training_goals, ...d.participation, ...d.posture, ...d.place, ...d.props, d.prep_level].join(" "));
+  d._ts = d.publish_date ? Date.parse(d.publish_date) : 0;
+});
+function expand(term){
+  for (const g of SYN) if (g.some(w => term.includes(norm(w)) || norm(w).includes(term) && term.length >= 2)) return [term, ...g.map(norm)];
+  return [term];
+}
+function toast(msg){ const t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove("show"), 1800); }
+
+/* ---------- filtering ---------- */
+function matches(d, skipKey){
+  if (state.favOnly && !favs.has(d.id)) return false;
+  if (state.cat !== "全部" && d.category !== state.cat) return false;
+  for (const g of GROUPS){
+    if (g.key === skipKey) continue;
+    const sel = state.f[g.key];
+    if (!sel.size) continue;
+    const vals = Array.isArray(d[g.key]) ? d[g.key] : [d[g.key]];
+    if (![...sel].some(v => vals.includes(v))) return false;
+  }
+  if (state.q){
+    const terms = norm(state.q).split(/[\s,，、]+/).filter(Boolean);
+    for (const t of terms){ if (!expand(t).some(a => d._hay.includes(a))) return false; }
+  }
+  return true;
+}
+function sortList(list){
+  const s = state.sort;
+  list.sort((a,b) => s === "views" ? (b.views||0)-(a.views||0) : s === "old" ? a._ts-b._ts || a.index-b.index : s === "short" ? (a.length_sec||0)-(b.length_sec||0) : b._ts-a._ts || a.index-b.index);
+  return list;
+}
+function apply(resetShown = true){
+  results = sortList(DATA.filter(d => matches(d)));
+  if (resetShown) state.shown = 0;
+  renderCats(); renderFilters(); renderResultbar(); renderGrid(resetShown);
+  writeHash();
+}
+
+/* ---------- rendering ---------- */
+function renderCats(){
+  const box = $("#cats"); box.innerHTML = "";
+  const saved = state.cat;
+  CATS.forEach(c => {
+    state.cat = c;
+    const n = c === "全部" ? DATA.filter(d => matches(d) ).length : DATA.filter(d => matches(d)).length;
+    state.cat = saved;
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "cat" + (c === saved ? " on" : ""); b.setAttribute("role","tab"); b.setAttribute("aria-selected", c === saved);
+    b.innerHTML = esc(CAT_LABEL[c] || c) + "<small>" + n + "</small>";
+    b.onclick = () => { state.cat = c; apply(); };
+    box.appendChild(b);
+  });
+}
+function renderFilters(){
+  const inner = $("#filtersInner");
+  inner.querySelectorAll(".fgroup.dyn").forEach(n => n.remove());
+  const presetBox = $("#presets"); presetBox.innerHTML = "";
+  PRESETS.forEach(p => {
+    const on = Object.entries(p.f).every(([k, vs]) => state.f[k].size === vs.length && vs.every(v => state.f[k].has(v)));
+    const b = document.createElement("button"); b.type = "button"; b.className = "chip" + (on ? " on" : ""); b.textContent = p.label;
+    b.onclick = () => { if (on){ Object.keys(p.f).forEach(k => state.f[k].clear()); } else { Object.entries(p.f).forEach(([k, vs]) => state.f[k] = new Set(vs)); } apply(); };
+    presetBox.appendChild(b);
+  });
+  GROUPS.forEach(g => {
+    const pool = DATA.filter(d => matches(d, g.key));
+    const wrap = document.createElement("div"); wrap.className = "fgroup dyn";
+    const sel = state.f[g.key];
+    wrap.innerHTML = "<h4>" + esc(g.label) + (sel.size ? ' <button type="button">清除</button>' : "") + "</h4>";
+    if (sel.size) wrap.querySelector("h4 button").onclick = () => { sel.clear(); apply(); };
+    const chips = document.createElement("div"); chips.className = "chips";
+    g.order.forEach(v => {
+      const n = pool.filter(d => (Array.isArray(d[g.key]) ? d[g.key] : [d[g.key]]).includes(v)).length;
+      const on = sel.has(v);
+      if (!n && !on) return;
+      const b = document.createElement("button"); b.type = "button"; b.className = "chip" + (on ? " on" : "");
+      b.setAttribute("aria-pressed", on);
+      b.innerHTML = esc(v) + " <small>" + n + "</small>";
+      b.onclick = () => { if (g.single && !on) sel.clear(); on ? sel.delete(v) : sel.add(v); apply(); };
+      chips.appendChild(b);
+    });
+    if (!chips.children.length) return;
+    wrap.appendChild(chips); inner.appendChild(wrap);
+  });
+  const hint = document.createElement("p"); hint.className = "fhint fgroup dyn";
+  hint.textContent = "同一類可複選（符合其一即可）；不同類會同時套用。數字為加上該條件後的筆數。";
+  inner.appendChild(hint);
+  const nActive = GROUPS.reduce((s, g) => s + state.f[g.key].size, 0);
+  $("#fCount").hidden = !nActive; $("#fCount").textContent = nActive;
+  $("#sheetN").textContent = results.length;
+}
+function renderResultbar(){
+  const bar = $("#resultbar"); bar.innerHTML = "";
+  const c = document.createElement("span"); c.className = "count"; c.textContent = "共 " + results.length + " 個活動"; bar.appendChild(c);
+  const add = (label, fn) => { const s = document.createElement("span"); s.className = "active-chip"; s.innerHTML = esc(label) + '<button type="button" aria-label="移除 ' + esc(label) + '">×</button>'; s.querySelector("button").onclick = fn; bar.appendChild(s); };
+  let any = false;
+  if (state.q){ any = true; add("搜尋：" + state.q, () => { $("#q").value = ""; state.q = ""; syncSearch(); apply(); }); }
+  if (state.cat !== "全部"){ any = true; add(CAT_LABEL[state.cat] || state.cat, () => { state.cat = "全部"; apply(); }); }
+  if (state.favOnly){ any = true; add("只看收藏", () => { state.favOnly = false; syncFav(); apply(); }); }
+  GROUPS.forEach(g => state.f[g.key].forEach(v => { any = true; add(v, () => { state.f[g.key].delete(v); apply(); }); }));
+  if (any){ const r = document.createElement("button"); r.type = "button"; r.className = "link-btn"; r.textContent = "清除全部"; r.onclick = resetAll; bar.appendChild(r); }
+}
+function thumb(d){
+  return d.format === "Shorts" ? "https://i.ytimg.com/vi/" + d.video_id + "/oar2.jpg" : d.thumbnail_url;
+}
+function cardHTML(d){
+  const tags = [...d.training_goals.slice(0,2).map(t => '<span class="tag g">' + esc(t) + "</span>"),
+                ...d.participation.filter(p => p !== "個人挑戰").slice(0,1).map(t => '<span class="tag p">' + esc(t) + "</span>"),
+                d.prep_level === "需自製教具" ? '<span class="tag d">需自製教具</span>' : d.prep_level.startsWith("免準備") ? '<span class="tag d">免準備</span>' : ""].join("");
+  const catTag = d.category !== "團康遊戲" ? '<span class="cat-tag">' + esc(CAT_LABEL[d.category] || d.category) + "</span>" : "";
+  return '<div class="thumb"><img loading="lazy" decoding="async" alt="" src="' + thumb(d) + '" onerror="this.onerror=null;this.src=\'' + d.thumbnail_url + '\'">' + catTag +
+    (d.length_text ? '<span class="len">' + d.length_text + "</span>" : "") +
+    '<span class="fav' + (favs.has(d.id) ? " on" : "") + '" role="button" tabindex="0" aria-label="收藏" data-fav="' + d.id + '">' + (favs.has(d.id) ? "♥" : "♡") + "</span></div>" +
+    '<div class="card-body"><div class="card-title">' + esc(d.zh_title) + '</div><div class="card-jp">' + esc(d.jp_title) + '</div><div class="card-desc">' + esc(d.how_to_play) + '</div><div class="tags">' + tags + "</div></div>";
+}
+function renderGrid(reset){
+  const grid = $("#grid");
+  if (reset) grid.innerHTML = "";
+  const next = results.slice(state.shown, state.shown + PAGE);
+  const frag = document.createDocumentFragment();
+  next.forEach(d => {
+    const el = document.createElement("article"); el.className = "card"; el.tabIndex = 0; el.dataset.id = d.id;
+    el.setAttribute("aria-label", d.zh_title); el.innerHTML = cardHTML(d); frag.appendChild(el);
+  });
+  grid.appendChild(frag);
+  state.shown += next.length;
+  $("#empty").hidden = results.length > 0;
+  const rest = results.length - state.shown;
+  $("#moreBtn").hidden = rest <= 0;
+  $("#moreBtn").textContent = "顯示更多（還有 " + rest + " 個）";
+}
+function resetAll(){ state.q = ""; $("#q").value = ""; syncSearch(); state.cat = "全部"; state.favOnly = false; syncFav(); GROUPS.forEach(g => state.f[g.key].clear()); apply(); }
+
+/* ---------- favorites ---------- */
+function toggleFav(id){
+  favs.has(id) ? favs.delete(id) : favs.add(id);
+  store.set("rs_favs_v2", [...favs]); syncFav();
+  document.querySelectorAll('[data-fav="' + id + '"]').forEach(el => { el.classList.toggle("on", favs.has(id)); el.textContent = favs.has(id) ? "♥" : "♡"; });
+  if (current && current.id === id) setModalFav();
+  if (state.favOnly) apply();
+}
+function syncFav(){ $("#favCount").textContent = favs.size; $("#favBtn").classList.toggle("on", state.favOnly); $("#favBtn").setAttribute("aria-pressed", state.favOnly); }
+
+/* ---------- modal ---------- */
+let current = null;
+function openModal(d){
+  current = d;
+  const frame = $("#mFrame");
+  frame.className = "frame" + (d.format === "長片" ? " wide" : "");
+  frame.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + d.video_id + '?rel=0&playsinline=1" title="' + esc(d.zh_title) + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>';
+  $("#mTitle").textContent = d.zh_title;
+  $("#mJp").textContent = "日文原標題：" + d.jp_title + "　｜　" + d.id;
+  const t = [d.category !== "團康遊戲" ? '<span class="tag d">' + esc(d.category) + "</span>" : "",
+    ...d.training_goals.map(x => '<span class="tag g">' + esc(x) + "</span>"),
+    ...d.participation.map(x => '<span class="tag p">' + esc(x) + "</span>"),
+    ...d.posture.map(x => '<span class="tag">' + esc(x) + "</span>"),
+    ...d.place.map(x => '<span class="tag">' + esc(x) + "</span>")].join("");
+  $("#mTags").innerHTML = t;
+  $("#mHow").textContent = d.how_to_play;
+  const propsTxt = (d.props.length ? "主要道具：" + d.props.join("、") : "") + (d.prep_level && d.prep_level !== "—" ? (d.props.length ? "。" : "") + "準備程度：" + d.prep_level : "");
+  $("#mPropsSec").hidden = !propsTxt; $("#mProps").textContent = propsTxt;
+  $("#mTipsSec").hidden = !d.leading_tips.length;
+  $("#mTips").innerHTML = d.leading_tips.map(x => "<li>" + esc(x) + "</li>").join("");
+  $("#mMeta").innerHTML = [d.format, d.length_text ? "長度 " + d.length_text : "", d.publish_date ? "發布 " + d.publish_date : "", d.views != null ? "觀看 " + d.views.toLocaleString() + " 次" : "", d.episode_no ? "原集數 " + d.episode_no : ""].filter(Boolean).map(esc).map(s => "<span>" + s + "</span>").join("");
+  $("#mYt").href = d.url;
+  setModalFav();
+  $("#mNote").value = notes[d.id] || "";
+  const i = results.findIndex(x => x.id === d.id);
+  $("#mPos").textContent = i >= 0 ? (i + 1) + " / " + results.length : "";
+  $("#mPrev").disabled = i <= 0; $("#mNext").disabled = i < 0 || i >= results.length - 1;
+  const m = $("#modal");
+  if (!m.open) m.showModal();
+  const top = () => { $(".m-info").scrollTop = 0; $(".m-wrap").scrollTop = 0; };
+  top(); requestAnimationFrame(top); setTimeout(top, 60);
+  history.replaceState(null, "", "#" + d.id);
+}
+function closeModal(){ const m = $("#modal"); if (m.open) m.close(); }
+function setModalFav(){ const on = favs.has(current.id); $("#mFav").textContent = on ? "♥ 已收藏" : "♡ 收藏"; }
+function step(dir){ const i = results.findIndex(x => x.id === current.id); const n = results[i + dir]; if (n) openModal(n); }
+
+/* ---------- hash state ---------- */
+function writeHash(){ /* keep URL clean; item deep link written by modal */ }
+function readHash(){
+  const h = decodeURIComponent(location.hash.slice(1));
+  const d = DATA.find(x => x.id === h);
+  if (d) openModal(d);
+}
+
+/* ---------- mobile sheet ---------- */
+function openSheet(){ $("#filters").classList.add("open"); $("#scrim").classList.add("show"); document.body.style.overflow = "hidden"; }
+function closeSheet(){ $("#filters").classList.remove("open"); $("#scrim").classList.remove("show"); document.body.style.overflow = ""; }
+
+/* ---------- events ---------- */
+let qTimer;
+function syncSearch(){ $("#searchBox").classList.toggle("has", !!$("#q").value); }
+$("#q").addEventListener("input", e => { syncSearch(); clearTimeout(qTimer); qTimer = setTimeout(() => { state.q = e.target.value.trim(); apply(); }, 200); });
+$("#q").addEventListener("keydown", e => { if (e.key === "Enter"){ e.target.blur(); } });
+$("#qClear").onclick = e => { e.preventDefault(); $("#q").value = ""; state.q = ""; syncSearch(); apply(); $("#q").focus(); };
+const setSort = v => { state.sort = v; $("#sort").value = v; $("#sortM").value = v; apply(); };
+$("#sort").onchange = e => setSort(e.target.value);
+$("#sortM").onchange = e => setSort(e.target.value);
+$("#favBtn").onclick = () => { state.favOnly = !state.favOnly; syncFav(); apply(); if (state.favOnly && !favs.size) toast("還沒有收藏，按卡片右上角的愛心即可收藏"); };
+$("#randBtn").onclick = () => { const pool = results.length ? results : DATA; openModal(pool[Math.floor(Math.random() * pool.length)]); };
+$("#filterBtn").onclick = openSheet;
+$("#sheetClose").onclick = closeSheet; $("#scrim").onclick = closeSheet;
+$("#sheetApply").onclick = () => { closeSheet(); document.getElementById("db").scrollIntoView({behavior:"smooth"}); };
+$("#sheetReset").onclick = () => { GROUPS.forEach(g => state.f[g.key].clear()); apply(); };
+$("#emptyReset").onclick = resetAll;
+$("#moreBtn").onclick = () => renderGrid(false);
+$("#grid").addEventListener("click", e => {
+  const f = e.target.closest("[data-fav]");
+  if (f){ e.stopPropagation(); toggleFav(f.dataset.fav); return; }
+  const c = e.target.closest(".card"); if (c) openModal(DATA.find(d => d.id === c.dataset.id));
+});
+$("#grid").addEventListener("keydown", e => {
+  if (e.key !== "Enter" && e.key !== " ") return;
+  const f = e.target.closest("[data-fav]"); if (f){ e.preventDefault(); toggleFav(f.dataset.fav); return; }
+  const c = e.target.closest(".card"); if (c){ e.preventDefault(); openModal(DATA.find(d => d.id === c.dataset.id)); }
+});
+$("#mClose").onclick = closeModal;
+$("#modal").addEventListener("click", e => { if (e.target.id === "modal") closeModal(); });
+$("#modal").addEventListener("close", () => { $("#mFrame").innerHTML = ""; current = null; history.replaceState(null, "", location.pathname + location.search); });
+$("#modal").addEventListener("keydown", e => { if (e.target.tagName === "TEXTAREA") return; if (e.key === "ArrowRight") step(1); if (e.key === "ArrowLeft") step(-1); });
+$("#mPrev").onclick = () => step(-1); $("#mNext").onclick = () => step(1);
+$("#mFav").onclick = () => toggleFav(current.id);
+$("#mShare").onclick = async () => {
+  const url = location.origin + location.pathname + "#" + current.id;
+  try { await navigator.clipboard.writeText(url); toast("已複製活動連結"); } catch(e){ prompt("複製這個連結：", url); }
+};
+$("#mNote").addEventListener("input", e => { if (!current) return; const v = e.target.value; if (v) notes[current.id] = v; else delete notes[current.id]; store.set("rs_notes_v2", notes); });
+window.addEventListener("hashchange", readHash);
+window.addEventListener("keydown", e => { if (e.key === "/" && document.activeElement.tagName !== "INPUT" && document.activeElement.tagName !== "TEXTAREA" && !$("#modal").open){ e.preventDefault(); $("#q").focus(); } });
+
+/* ---------- init ---------- */
+(function init(){
+  const cnt = c => DATA.filter(d => d.category === c).length;
+  $("#h-total").textContent = DATA.length;
+  $("#s-games").textContent = cnt("團康遊戲");
+  $("#s-towel").textContent = cnt("毛巾遊戲（レクル系列）");
+  $("#s-diy").textContent = cnt("教具製作與介紹");
+  syncFav(); apply(); readHash();
+})();
+</script>
+</body>
+</html>
